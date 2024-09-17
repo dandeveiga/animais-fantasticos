@@ -1,0 +1,23 @@
+import initSmoothScroll from "./modules/scroll-suave.js";
+import initAnimacaoScroll from "./modules/scroll-animacao.js";
+import initAccordionList from "./modules/scroll-accordion.js";
+import initTabNav from "./modules/tabnav.js";
+import initModal from "./modules/modal.js";
+import initTooltip from "./modules/tooltip.js";
+import initMenuDropDown from "./modules/menu-dropdown.js";
+import initMenuMobile from "./modules/menu-mobile.js";
+import initFuncionamento from "./modules/date-object.js";
+import initFetchAnimais from "./modules/fetch-animais.js";
+import initFetchBitcoin from "./modules/fetch-bitcoin.js";
+
+initSmoothScroll();
+initAnimacaoScroll();
+initAccordionList();
+initTabNav();
+initModal();
+initTooltip();
+initMenuDropDown();
+initMenuMobile();
+initFuncionamento();
+initFetchAnimais();
+initFetchBitcoin();
