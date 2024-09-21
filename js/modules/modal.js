@@ -1,25 +1,45 @@
-export default function initModal() {
-  // começar selecionando os botões que vão ser utilizados
-  const botaoAbrir = document.querySelector('[data-modal="abrir"]');
-  const botaoFechar = document.querySelector('[data-modal="fechar"]');
-  const containerModal = document.querySelector('[data-modal="container"]');
+export default class Modal {
+  constructor(botaoAbrir, botaoFechar, containerModal) {
+    this.botaoAbrir = document.querySelector(botaoAbrir);
+    this.botaoFechar = document.querySelector(botaoFechar);
+    this.containerModal = document.querySelector(containerModal);
 
-  // agora adicionar as funções
-  if (botaoAbrir && botaoFechar && containerModal) {
-    function toggleModal(event) {
-      event.preventDefault(); // previne o padrão de ir para outro URL
-      containerModal.classList.toggle("ativo"); // adiciona ou remove a classe ativo
+    // bind this ao callback
+    // para fazer referencia
+    // ao objeto da classe
+    this.eventToggleModal = this.eventToggleModal.bind(this);
+    this.cliqueForaModal = this.cliqueForaModal.bind(this);
+  }
+
+  // abre ou fecha o modal
+  toggleModal() {
+    this.containerModal.classList.toggle("ativo");
+  }
+
+  // add o evento de toggle ao modal
+  eventToggleModal(event) {
+    event.preventDefault();
+    this, this.toggleModal();
+  }
+
+  // fecha o modal ao clicar do lado de fora
+  cliqueForaModal(event) {
+    if (event.target === this.containerModal) {
+      this.toggleModal();
     }
+  }
 
-    function cliqueForaModal(event) {
-      if (event.target === this) {
-        // aqui o this é referente containerModal
-        toggleModal(event);
-      }
+  // adiciona os eventos aos elementos do modal
+  addModalEvents() {
+    this.botaoAbrir.addEventListener("click", this.eventToggleModal);
+    this.botaoFechar.addEventListener("click", this.eventToggleModal);
+    this.containerModal.addEventListener("click", this.cliqueForaModal);
+  }
+
+  init() {
+    if (this.botaoAbrir && this.botaoFechar && this.containerModal) {
+      this.addModalEvents();
     }
-
-    botaoAbrir.addEventListener("click", toggleModal);
-    botaoFechar.addEventListener("click", toggleModal);
-    containerModal.addEventListener("click", cliqueForaModal);
+    return this;
   }
 }
