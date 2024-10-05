@@ -1,15 +1,12 @@
-/* estilo de grid de ponta a ponta para a galeria toda */
 .galeria {
-  grid-column: 2 / 4;
+  grid-column: 1 / -1;
 }
 
-/* Estilos da classe slide-wrapper */
 .slide-wrapper {
   overflow: hidden;
-  grid-column: 2 / 4;
+  grid-column: 1 / -1;
 }
 
-/* Estilos da classe slide */
 .slide {
   display: flex;
 }
@@ -20,9 +17,10 @@
 
 .slide li {
   flex-shrink: 0;
-  width: 80vw; /* vw = virtual width */
+  width: 80vw;
   max-width: 800px;
   margin: 0 20px;
+
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -40,7 +38,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  grid-column: 2 / 4;
+  grid-column: 1 / -1;
 }
 
 .custom-controls li {
@@ -58,25 +56,4 @@
 .custom-controls li.active {
   opacity: 1;
   transform: scale(1);
-}
-
-.arrow-nav {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
-  grid-column: 2 / 4;
-}
-
-.arrow-nav button {
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  width: 40px;
-  height: 40px;
-  background: #fb5 url("../img/arrow.svg") center center no-repeat;
-}
-
-.arrow-nav button.prev {
-  transform: rotate(-180deg);
 }

@@ -1,64 +1,47 @@
-import ScrollSuave from "./modules/scroll-suave.js";
-import Accordion from "./modules/scroll-accordion.js";
-import TabNav from "./modules/tabnav.js";
-import Modal from "./modules/modal.js";
-import Tooltip from "./modules/tooltip.js";
-import DropdownMenu from "./modules/menu-dropdown.js";
-import MenuMobile from "./modules/menu-mobile.js";
-import Funcionamento from "./modules/date-object.js";
-import fetchAnimais from "./modules/fetch-animais.js";
-import fetchBitcoin from "./modules/fetch-bitcoin.js";
-import ScrollAnima from "./modules/scroll-anima.js";
-import SlideNav from "./modules/slide.js";
+import ScrollSuave from './modules/scroll-suave.js';
+import Accordion from './modules/accordion.js';
+import TabNav from './modules/tabnav.js';
+import Modal from './modules/modal.js';
+import Tooltip from './modules/tooltip.js';
+import DropdownMenu from './modules/dropdown-menu.js';
+import MenuMobile from './modules/menu-mobile.js';
+import Functionamento from './modules/funcionamento.js';
+import fetchAnimais from './modules/fetch-animais.js';
+import fetchBitcoin from './modules/fetch-bitcoin.js';
+import ScrollAnima from './modules/scroll-anima.js';
+import SlideNav from './modules/slide.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
 
-// se estivesse colocando options aqui, ficaria:
-// const option = {
-// behavior: 'smooth',
-// block: 'start'
-// } >> depois escreveria ,options como segundo argumento da const scrollSuave, ficaria assim:
-
-// const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]', options);
-// scrollSuave.init();
-
-const accordion = new Accordion("[data-anime='accordion'] dt");
+const accordion = new Accordion('[data-anime="accordion"] dt');
 accordion.init();
 
-const tabNav = new TabNav(
-  '[data-tab="menu"] li',
-  '[data-tab="content"] section'
-);
+const tabNav = new TabNav('[data-tab="menu"] li', '[data-tab="content"] section');
 tabNav.init();
 
-const modal = new Modal(
-  '[data-modal="abrir"]',
-  '[data-modal="fechar"]',
-  '[data-modal="container"]'
-);
+const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
 modal.init();
 
-const tooltip = new Tooltip("[data-tooltip]");
+const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
-const scrollAnima = new ScrollAnima("[data-anime='scroll']");
+const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
 scrollAnima.init();
 
-const dropdownMenu = new DropdownMenu("[data-dropdown]");
+const dropdownMenu = new DropdownMenu('[data-dropdown]');
 dropdownMenu.init();
 
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
-const funcionamento = new Funcionamento("[data-semana]", "aberto");
+const funcionamento = new Functionamento('[data-semana]', 'aberto');
 funcionamento.init();
 
-fetchAnimais("./animaisapi.json", ".numeros-grid");
+fetchAnimais('./animaisapi.json', '.numeros-grid');
 
-fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
+fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 
-const slide = new SlideNav(".slide", ".slide-wrapper");
+const slide = new SlideNav('.slide', '.slide-wrapper');
 slide.init();
-slide.addArrow(".prev", ".next");
-slide.addControl(".custom-controls");
+slide.addControl('.custom-controls');

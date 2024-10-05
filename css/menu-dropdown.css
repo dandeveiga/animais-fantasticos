@@ -27,7 +27,6 @@
   position: absolute;
   top: 38px;
   background-color: #e54;
-  border: 0px solid #333;
   z-index: 200;
 }
 /* criando o triângulo que aponta para o submenu usando as bordas */
@@ -45,4 +44,11 @@
 
 .dropdown-menu li a:hover {
   color: whitesmoke;
+}
+
+@media (max-width: 700px) {
+  [data-dropdown] .dropdown-menu {
+    display: block;
+    animation: show-up 0.1s forwards;
+  }
 }
