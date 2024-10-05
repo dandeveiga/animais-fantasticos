@@ -2,14 +2,13 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Animais Fantásticos</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
-  <script>document.documentElement.className += 'js'</script>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:700|Playfair+Display+SC" rel="stylesheet">
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body>
@@ -21,31 +20,41 @@
         <li data-dropdown>
           <a href="sobre.html">Sobre</a>
           <ul class="dropdown-menu">
-            <li><a href="empresa.html">Empresa</a></li>
+            <li><a href="empresa.html">A Empresa</a></li>
             <li><a href="equipe.html">Equipe</a></li>
             <li><a href="socios.html">Sócios</a></li>
             <li><a href="investidores.html">Investidores</a></li>
           </ul>
         </li>
         <li><a href="#faq">Faq</a></li>
-        <li><a href="#galeria">Galeria</a></li>
         <li><a href="#contato">Contato</a></li>
-        <li><a data-modal="abrir" href="login.html">Login →</a></li>
+        <li><a data-modal="abrir" href="login.html">Login <span class="arrow-black"></span></a></li>
       </ul>
     </nav>
-
     <section class="grid-section animais" data-anime="scroll" id="animais">
       <h1 class="titulo">Animais Fantásticos</h1>
       <ul class="animais-lista" data-tab="menu">
-        <li> <img src="img/imagem1.jpg" alt="Imagem 1"></li>
-        <li> <img src="img/imagem2.jpg" alt="Imagem 2"></li>
-        <li> <img src="img/imagem3.jpg" alt="Imagem 3"></li>
-        <li> <img src="img/imagem4.jpg" alt="Imagem 4"></li>
-        <li> <img src="img/imagem5.jpg" alt="Imagem 5"></li>
-        <li> <img src="img/imagem6.jpg" alt="Imagem 6"></li>
+        <li>
+          <img src="img/imagem1.jpg">
+        </li>
+        <li>
+          <img src="img/imagem2.jpg">
+        </li>
+        <li>
+          <img src="img/imagem3.jpg">
+        </li>
+        <li>
+          <img src="img/imagem4.jpg">
+        </li>
+        <li>
+          <img src="img/imagem5.jpg">
+        </li>
+        <li>
+          <img src="img/imagem6.jpg">
+        </li>
       </ul>
       <div class="animais-descricao" data-tab="content">
-        <section data-anime="show-down">
+        <section data-anime="show-right">
           <h2>Raposa</h2>
           <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
@@ -103,7 +112,6 @@
         <dt>Qual a idade dos animais?</dt>
         <dd>Vai depender do ano em que eles nasceram. A partir disso, é calculado o ano atual menos o ano que nasceram para saber a idade de cada um.</dd>
 
-
         <dt>Eles são fantásticos?</dt>
         <dd>São fantásticos, sim! Alguns dão mais medo que outros, até entre eles mesmos existe certa rivalidade. Se saírem na mão do nada, alguém vai se machucar feio.</dd>
 
@@ -115,8 +123,7 @@
       </dl>
     </section>
 
-    <section class="grid-section galeria" data-anime="scroll" id="galeria">
-      <h1 class="titulo ">GALERIA</h1>
+    <section class="grid-section galeria" data-anime="scroll">
       <ul class="custom-controls">
         <li><img src="img/slide/foto1-thumb.jpg" alt=""></li>
         <li><img src="img/slide/foto2-thumb.jpg" alt=""></li>
@@ -135,67 +142,46 @@
           <li><img src="img/slide/foto6.jpg" alt=""></li>
         </ul>
       </div>
-      <div class="arrow-nav">
-        <button class="prev"></button>
-        <button class="next"></button>
-      </div>
     </section>
 
     <section class="grid-section numeros" data-anime="scroll">
-      <h1 class="titulo numeros">NÚMEROS</h1>
+      <h1 class="titulo">Números</h1>
       <div class="numeros-grid">
-        <!-- <div class="numero-animal">
-          <h3>Lobos</h3>
-          <span data-numero>4874</span>
-        </div>
-        <div class="numero-animal">
-          <h3>Raposas</h3>
-          <span data-numero>5322</span>
-        </div>
-        <div class="numero-animal">
-          <h3>Esquilos</h3>
-          <span data-numero>12340</span>
-        </div>
-        <div class="numero-animal">
-          <h3>Ursos</h3>
-          <span data-numero>666</span>
-        </div> -->
       </div>
     </section>
 
     <section class="grid-section contato" data-anime="scroll" id="contato">
       <h1 class="titulo">Contato</h1>
-      <div class="mapa" data-tooltip aria-label="Endereço próximo ao estacionamento vaiPalmeiras.">
-        <img src="img/mapa.png" alt="Mapa">
+      <div class="mapa" data-tooltip aria-label="Endereço próximo ao estacionamento.">
+        <img src="img/mapa.png">
       </div>
-
       <ul class="dados">
-        <li>contato@dandevmail.com</li>
-        <li>+55 (19) 99999-9999</li>
-        <li>Rua Longe da depressão, nº 22</li>
+        <li>contato@dandeveiga.com</li>
+        <li>+55 (11) 99000-9900</li>
+        <li>Rua Lá Longe, nº 22</li>
         <li>São Paulo - SP</li>
         <li>Doe <span class="btc-preco">0</span> bitcoin para nos ajudar</li>
-        <li data-semana="1,2,3,4,5" data-horario="8,18">Seg a Sex das 8 às 18</li>
+        <li data-semana="1,2,3,4,5" data-horario="8,18">Seg à Sex das 8 às 18</li>
       </ul>
     </section>
 
-    <footer class="copyright">
+    <footer class="copy">
       <p>Todos os direitos reservados.</p>
     </footer>
   </div>
+
   <section class="modal-container" data-modal="container">
     <div class="modal">
-      <button data-modal="fechar" class="fechar">X</button>
+      <button data-modal="fechar" class="fechar"></button>
       <form action="">
         <label for="email">Email</label>
-        <input type="text" for="email" id="email" autocomplete="email">
+        <input type="text" for="email" id="email">
         <label for="senha">Senha</label>
-        <input type="password" for="senha" id="senha" autocomplete="current-password">
+        <input type="password" for="senha" id="senha">
         <button type="submit">Entrar</button>
       </form>
     </div>
   </section>
-
   <script src="main.js"></script>
 </body>
 
